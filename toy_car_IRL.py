@@ -8,10 +8,13 @@ from cvxopt import matrix
 from cvxopt import solvers #convex optimization library
 from flat_game import carmunk # get the environment
 from learning import IRL_helper # get the Reinforcement learner
-
+#Import dependencies and define the important parameters, change the BEHAVIOR as required. 
 NUM_STATES = 8 
 BEHAVIOR = 'red' # yellow/brown/red/bumping
+
+#FRAMES are the number of frames you want the RL algorithm to run. 100K is okay and takes around 2 hours.
 FRAMES = 100000 # number of RL training frames per iteration of IRL
+
 
 class irlAgent:
     def __init__(self, randomFE, expertFE, epsilon, num_states, num_frames, behavior):
